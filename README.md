@@ -3,7 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|string|null: false, add_index :users,:email,unique: true|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 
 ### Association
@@ -16,8 +16,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -41,8 +41,8 @@
 |------|----|-------|
 |body|text|null: false|
 |image|string||
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
