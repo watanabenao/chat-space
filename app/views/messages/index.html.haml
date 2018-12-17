@@ -1,19 +1,17 @@
-.notifiction
-  チャットグループが作成されました
-
 .side
   .side__user
     .side__user-content
       .side__user-name
-        watanabenao
+        = current_user.name
       .side__user-btm
-        = link_to "https://www.google.co.jp" do
+        = link_to new_group_path do
           %i.fa.fa-pencil-square-o
-        = link_to "https://www.google.co.jp" do
+        = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
 
   .side__group
-    = render partial:"chatside-group"
+    = render partial:"shared/chatside-group"
+
 .chat-main
   .chat-main__header
     .chat-main__header--group

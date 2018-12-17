@@ -39,15 +39,15 @@
     height: calc(100vh - 15%);
     background-color: #2f3e51;
 
+    a{
+      text-decoration: none;
+    }
+
     &-content{
       box-sizing: border-box;
       width: 100%;
       padding: 20px;
       color: $white;
-
-    &-content p{
-      text-decoration: none;
-    }
     }
 
     &-name{
