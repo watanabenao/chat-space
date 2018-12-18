@@ -96,7 +96,8 @@
 
   .footer__form{
     position: relative;
-    input.message{
+
+    .form__message{
       float: left;
       width: calc(100% - 115px);
       height: 50px;
@@ -109,7 +110,7 @@
         }
     }
 
-    label{
+    .form__image{
       position: absolute;
       top: 0;
       left: calc(100% - 145px);
@@ -119,19 +120,19 @@
       margin: 0;
       padding-right: 10px;
 
-      input.image{
-        display: none;
+        .image{
+          display: none;
 
-      }
+        }
 
-      i.fa{
-        line-height: 50px;
-      }
+        .icon{
+          line-height: 50px;
+        }
       
     }
 
 
-    input.submit{
+    .form__submit{
       float: right;
       width: 100px;
       height: 50px;
