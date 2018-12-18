@@ -9,9 +9,10 @@
         MEMBER:
         - @group.members.each do |member|
           = member.user.name
-    %a.btn{href: 'https://www.google.co.jp'} 
-      .btn-edit
-        Edit
+    .btn
+      = link_to edit_group_path(@group) do
+        .btn-edit
+          Edit
 
   .chat-main__content
     .chat-main__list
