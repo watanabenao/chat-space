@@ -1,40 +1,30 @@
-.side
-  .side__user
-    .side__user-content
-      .side__user-name
-        = current_user.name
-      .side__user-btm
-        = link_to new_group_path do
-          %i.fa.fa-pencil-square-o
-        = link_to edit_user_path(current_user) do
-          %i.fa.fa-cog
+.warapper
+  
+  = render "shared/side_bar"
 
-  .side__group
-    = render partial:"shared/chatside-group"
+  .chat-main
+    .chat-main__header
+      .chat-main__header--group
+        %h1.chat-main__header--group-name
+          test
+        %p.chat-main__header--group-members
+          Members: nao,chiho
+      %a.btn{href: 'https://www.google.co.jp'} 
+        .btn-edit
+          Edit
 
-.chat-main
-  .chat-main__header
-    .chat-main__header--group
-      %h1.chat-main__header--group-name
-        test
-      %p.chat-main__header--group-members
-        Members: nao,chiho
-    %a.btn{href: 'https://www.google.co.jp'} 
-      .btn-edit
-        Edit
+    .chat-main__content
+      .chat-main__list
+        =render partial: "chatmain-message"
+        
 
-  .chat-main__content
-    .chat-main__list
-      =render partial: "chatmain-message"
-      
-
-  .chat-main__footer
-    %form.footer__form
-      %input.message{type: "text", placeholder: "type a message"}
-      %label{for: "message-image"}
-        %input.image{type: "file", accept: "image/*", id: "message-image"}
-        %i.fa.fa-picture-o  
-      %input.submit{type: "submit", value: "Send"}
+    .chat-main__footer
+      %form.footer__form
+        %input.message{type: "text", placeholder: "type a message"}
+        %label{for: "message-image"}
+          %input.image{type: "file", accept: "image/*", id: "message-image"}
+          %i.fa.fa-picture-o  
+        %input.submit{type: "submit", value: "Send"}
 
 
 
